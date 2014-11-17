@@ -21,7 +21,7 @@ use Composer\IO\IOInterface;
 
 class FactoryMock extends Factory
 {
-    public static function createConfig(IOInterface $io = null)
+    public static function createConfig(IOInterface $io = null, $disablePackagist = false)
     {
         $config = new Config();
 

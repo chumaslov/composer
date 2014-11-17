@@ -86,6 +86,7 @@ class Factory
 
     /**
      * @param  IOInterface|null $io
+     * @param  bool             $disablePackagist
      * @return Config
      */
     public static function createConfig(IOInterface $io = null, $disablePackagist = false)
@@ -191,6 +192,7 @@ class Factory
      * @param  array|string|null         $localConfig    either a configuration array or a filename to read from, if null it will
      *                                                   read from the default filename
      * @param  bool                      $disablePlugins Whether plugins should not be loaded
+     * @param  bool                      $disablePackagist
      * @throws \InvalidArgumentException
      * @throws \UnexpectedValueException
      * @return Composer
@@ -470,6 +472,7 @@ class Factory
      * @param  mixed       $config         either a configuration array or a filename to read from, if null it will read from
      *                                     the default filename
      * @param  bool        $disablePlugins Whether plugins should not be loaded
+     * @param  bool        $disablePackagist
      * @return Composer
      */
     public static function create(IOInterface $io, $config = null, $disablePlugins = false, $disablePackagist = false)

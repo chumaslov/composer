@@ -188,6 +188,7 @@ class Application extends BaseApplication
     /**
      * @param  bool                    $required
      * @param  bool                    $disablePlugins
+     * @param  bool                    $disablePackagist
      * @throws JsonValidationException
      * @return \Composer\Composer
      */

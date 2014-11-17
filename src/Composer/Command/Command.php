@@ -39,6 +39,7 @@ abstract class Command extends BaseCommand
     /**
      * @param  bool              $required
      * @param  bool              $disablePlugins
+     * @param  bool              $disablePackagist
      * @throws \RuntimeException
      * @return Composer
      */
@@ -48,7 +49,6 @@ abstract class Command extends BaseCommand
             $application = $this->getApplication();
             if ($application instanceof Application) {
                 /* @var $application    Application */
-                echo 'Command - ' . $disablePackagist;
                 $this->composer = $application->getComposer($required, $disablePlugins, $disablePackagist);
             } elseif ($required) {
                 throw new \RuntimeException(
